@@ -1,0 +1,41 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Android build files
+**/build/
+.gradle/
+.kotlin/
+
+# Native build files
+.externalNativeBuild/
+.cxx/
+
+# IDE files
+.idea/
+*.iml
+
+# Python / ML files
+__pycache__/
+.venv/
+ml-training/datasets/
+ml-training/runs/
+
+# Model weights (if generated locally)
+*.pt
+
+# Signing keys - keep private
+*.jks
+*.keystore
