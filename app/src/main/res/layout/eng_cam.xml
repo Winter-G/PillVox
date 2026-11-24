@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F2E2">
+
+<TextView
+    android:id="@+id/tv_brand"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="16dp"
+    android:text="PillVox"
+    android:textColor="#23073F"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<LinearLayout
+    android:id="@+id/lang_switcher"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="@id/tv_brand"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@id/tv_brand">
+
+    <TextView
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="#4D2382"
+        android:gravity="center"
+        android:text="EN"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="6dp"
+        android:background="#E7E0F4"
+        android:gravity="center"
+        android:text="SI"
+        android:textColor="#23073F" />
+
+    <TextView
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="6dp"
+        android:background="#E7E0F4"
+        android:gravity="center"
+        android:text="TA"
+        android:textColor="#23073F" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/card_camera"
+    android:layout_width="0dp"
+    android:layout_height="300dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="14dp"
+    android:background="#23073F"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_brand">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#C99B32"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="6dp"
+        android:text="Pill detected"
+        android:textColor="#1B0D2B"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_camera">
+
+        <ImageView
+            android:id="@+id/iv_pill_preview"
+            android:layout_width="110dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:rotation="-30"
+            android:contentDescription="Pill detected" />
+    </FrameLayout>
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/card_status"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="12dp"
+    android:background="#E7E0F4"
+    android:orientation="vertical"
+    android:padding="14dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/card_camera">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Position"
+            android:textColor="#23073F"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Centred"
+            android:textColor="#23073F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Focus"
+            android:textColor="#23073F"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Steady"
+            android:textColor="#23073F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Imprint"
+            android:textColor="#23073F"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turn pill to show markings"
+            android:textColor="#23073F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/banner_spoken"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="12dp"
+    android:background="#4D2382"
+    android:orientation="vertical"
+    android:padding="14dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/card_status">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spoken and captioned"
+        android:textColor="#E7E0F4"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Please turn the pill so the printed markings face the camera."
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+</LinearLayout>
+
+<Button
+    android:id="@+id/btn_scan_pill"
+    android:layout_width="0dp"
+    android:layout_height="54dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="12dp"
+    android:background="#4D2382"
+    android:text="Scan pill"
+    android:textColor="#FFFFFF"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/banner_spoken" />
+
+<LinearLayout
+    android:id="@+id/bottom_nav"
+    android:layout_width="0dp"
+    android:layout_height="68dp"
+    android:background="#E7E0F4"
+    android:gravity="center"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#4D2382"
+        android:gravity="center"
+        android:text="Scan"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Reminders"
+        android:textColor="#23073F" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Guardian"
+        android:textColor="#23073F" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Access"
+        android:textColor="#23073F" />
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
